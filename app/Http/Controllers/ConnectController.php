@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Dotenv\Validator as DotenvValidator;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
+use App\Models\User;
+use Illuminate\Contracts\Session\Session;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 class ConnectController extends Controller
 {
 
