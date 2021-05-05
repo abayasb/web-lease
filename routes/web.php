@@ -21,4 +21,8 @@ Route::get('/', function () {
 //ESPESIFICAR LA RUTA DESDE LA RAIZ
 // LAS RUTAS SIRVE PARA QUE EL SOFTWARE
 //SEPA DONDE TIENE QUE DIRIJISE.
-Route::get('/login', 'App\Http\Controllers\ConnectController@getLogin');
+Route::get('/login', 'App\Http\Controllers\ConnectController@getLogin')->name('login');
+Route::get('/register', 'App\Http\Controllers\ConnectController@getRegister')->name('register');
+Route::post('/register', 'App\Http\Controllers\ConnectController@postRegister')->name('register');
+Route::post('/login', 'App\Http\Controllers\ConnectController@postLogin')->name('login');
+Route::get('/logout', 'App\Http\Controllers\ConnectController@getLogout')->name('logout');
