@@ -21,15 +21,19 @@
     <div class="main">
         <ul>
             <li>
-                <a href="{{'/admin'}}"><i class="fas fa-home"></i>dashboard</a>
+                <a href="{{'/admin'}}"><i class="fas fa-home"></i>Inicio</a>
             </li>
             <li>
-                <a href="{{'/admin'}}"><i class="fas fa-box"></i>roductos</a>
+                <a href="{{'/admin/departament'}}"><i class="fas fa-box"></i>Adepartamento</a>
+            </li>
+            <li>
+                <a href="{{'/admin/information-personal'}}"><i class="fas fa-users"></i>Datos Personales</a>
             </li>
 
             <li>
-                <a href="{{'/admin'}}"><i class="fas fa-users"></i>Usuario</a>
+                <a href="{{'/admin/gallery'}}"><i class="fa fa-picture-o"></i>Galeria</a>
             </li>
+
 
         </ul>
     </div>

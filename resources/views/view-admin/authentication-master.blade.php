@@ -34,7 +34,7 @@
                     <ul  class = "navbar-nav">
                         <li class="nav-item">
                             <a href="{{ url('/admin')}}" class="nav-link">
-                            <i class="fas fa-home"></i>Dashboard</a>
+                            <i class="fas fa-home"></i>Home</a>
                         </li>
                     </ul>
                 </div>
@@ -44,14 +44,35 @@
                     <nav aria-label="breadcrumb shadow">
                         <ol class="breadcrumb shadow">
                             <li class="breadcrumb-item">
-                            <a href="{{ url('/admin')}}" class="nav-link">
-                            <i class="fas fa-home"></i>Dashboard</a>
+                                <a href="{{ url('/admin')}}" class="nav-link">
+                            <i class="fas fa-home"></i>Home</a>
                             </li>
                             @section('breadcrumb')
                             @show
                         </ol>
                     </nav>
                 </div>
+                @if(Session::has('message'))
+                <div class="containers">
+                    <div class="alert alert-{{Session::get('alert')}}" style="display: none;">
+                        <!-- {{Session::get('alert')}} -->
+                        {{Session::get('message')}}
+                        @if($errors->any())
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                <li>{{$error}}</li>
+                                @endforeach
+                            </ul>
+                        @endif
+                        <script>
+                            $('.alert').slideDown();
+                            setTimeout(function(){$('.alert').slideUp();},5000);
+                        </script>
+                    </div>
+                </div>
+            @endif
+            @section('contenet')
+            @show
             </div>
         </div>
     </div>
