@@ -7,10 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class provincia extends Model
 {
-    use HasFactory;
-
-    public function ciudad()
-    {
-        return $this->hasMany('');
-    }
+    protected $table = 'provincia';
+    protected $fillable=['nombre_provincia'];
+   
 }

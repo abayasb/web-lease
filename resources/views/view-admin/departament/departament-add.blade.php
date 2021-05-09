@@ -57,8 +57,12 @@
                         <label for="localitation-provincia">Provincia</label>
                         
                         <select name="provincia" id="provincia" class="form-control">
-                            <option value="values0">Seleccione</option>
-                                
+                            
+                            @foreach($provincias as $pro)
+                                <option value="{{$pro->id_provincia}}">{{$pro->nombre_provincia}}</option>
+                            @endforeach
+                            
+                            
                         </select> 
                     </div>
 
@@ -66,7 +70,7 @@
                         <label for="localitation-provincia">Ciudad</label>
                         
                         <select name="provincia" id="provincia" class="form-control">
-                            <option value="values0">Seleccione</option>
+                            <option value=>Seleccione</option>
                                 
                         </select> 
                     </div>
