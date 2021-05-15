@@ -56,32 +56,23 @@
                     <div class="col-md-4">
                         <label for="localitation-provincia">Provincia</label>
                         
-                        <select name="provincia" id="provincia" class="form-control">
-                            
-                            @foreach($provincias as $pro)
-                                <option value="{{$pro->id_provincia}}">{{$pro->nombre_provincia}}</option>
-                            @endforeach
-                            
-                            
-                        </select> 
+                         
+
+                        {!! Form::select('_provincia',$provincias,null,['id'=>'_provincia',
+                        'class'=>'form-control'])!!}
                     </div>
 
                     <div class="col-md-4">
-                        <label for="localitation-provincia">Ciudad</label>
-                        
-                        <select name="provincia" id="provincia" class="form-control">
-                            <option value=>Seleccione</option>
-                                
-                        </select> 
+                        <label for="">Ciudad</label>
+                        {!!Form::select('_ciudad',['placeholder'=>'Seleccione'],null,['id'=>'_ciudad',
+                            'class'=>'form-control'])!!}
                     </div>
 
                     <div class="col-md-4">
-                        <label for="localitation-provincia">Universidad</label>
-                        
-                        <select name="provincia" id="provincia" class="form-control">
-                            <option value="values0">Seleccione</option>
-                                
-                        </select> 
+                        <label for="">Universidad</label>
+                        {!!Form::select('_universidad',['placeholder'=>'Seleccione'],null,['id'=>'_universidad',
+                            'class'=>'form-control'])!!}
+                       
                     </div>
                 </div>
 
@@ -102,4 +93,32 @@
             </div>
         </div>
     </div>
+    
+@endsection
+@section('scritp')
+    <script>
+        $("#_provincia").change(function(event){
+            $.get("_ciudad/"+event.target.value+"",function(response, provincia){
+                console.log(response);
+                $("#_ciudad").empty();
+                $("#_ciudad").append("<option values='"+0+"'>"+"Seleccione"+"</option");
+                $("#_universidad").append("<option values='"+0+"'>"+"Seleccione"+"</option");
+                for (let index = 0; index < response.length; index++) {
+                   $("#_ciudad").append("<option value='"+response[index].id_ciudad+"'>"+response[index].nombre_ciudad+"</option>") 
+                }
+            });
+        });
+
+        $("#_ciudad").change(function(event){
+            $.get("_universidad/"+event.target.value+"",function(response, provincia){
+                console.log("_universidad/"+event.target.value);
+                $("#_universidad").empty();
+                $("#_universidad").append("<option values='"+0+"'>"+"Seleccione"+"</option");
+                for (let index = 0; index < response.length; index++) {
+                   $("#_universidad").append("<option value='"+response[index].id_universidad+"'>"+response[index].nombre_universidad+"</option>") 
+                }
+            });
+        });
+
+    </script>
 @endsection
