@@ -42,11 +42,11 @@
 
                         <div class="col-md-8">
                         {!! Form::Label('text','Telefono')!!}
-                        {!! Form::text('phone',null,['class'=>'form-control']) !!}
+                            <input type="text" name="" id="email" value='{{Auth::user()->telefono}}' class = "form-control" disabled>
                         <br>
                         </div>            
                     </div>
-                    {!! Form::submit('Actualizar',['class'=>'btn btn-success margin-top-16'])!!}
+                    {!! Form::submit('Editar',['class'=>'btn btn-success margin-top-16'])!!}
                 {!! Form::close()!!}
             </div>
         </div>

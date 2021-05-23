@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\ModelDepartamento;
 use Illuminate\Http\Request;
+
+use function GuzzleHttp\Promise\all;
 
 class GalleryController extends Controller
 {
@@ -16,12 +19,15 @@ class GalleryController extends Controller
     public function getGallery()
     {
         # code...
-        return view('view-admin.departament.departament-gallery');
+        $departament = ModelDepartamento::get();
+        return view('view-admin.departament.departament-gallery',compact('departament'));
     }
 
-    public function getGalleryAdd()
+    public function getGalleryAdd($id_departamento, Request $request)
     {
-        # code...
-        return view('view-admin.departament.departament-gallery-add');
+        $departament = ModelDepartamento::where('id_departamento',$id_departamento)->first();
+        
+        //return $departament;
+        return view('view-admin.departament.departament-gallery-add',compact('departament'));
     }
 }
