@@ -15,6 +15,7 @@
 
         <div class="container-general">
             {!! Form::open(['url' => '/register']) !!}
+            @csrf
             <div class="row">
                 <div class="col">
                     <label for="name">Nombre</label>
@@ -41,6 +42,16 @@
                    </div>
                 </div>
             </div>
+
+
+            <label for="phone" class="margin-top-16">Telefono</label>
+            <div class="input-group">
+                    <div class="input-group-text">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                {!! Form::text('phone', null, ['class' => 'form-control','required']) !!}
+            </div>
+
 
             <label for="email" class="margin-top-16">Correo electrónico:</label>
             <div class="input-group">
@@ -92,10 +103,6 @@
                 <a href="{{ url('/login')}}">¿Ya tengo cuenta, Ingresar</a>
             </div> 
         </div>
-        
-        
-    
     </div>
-     
 <!-- Finalizamos la seccion del contenido  -->
 @stop 

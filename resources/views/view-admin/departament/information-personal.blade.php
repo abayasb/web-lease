@@ -22,21 +22,21 @@
                         <div class="col-md-4">
                         {!! Form::Label('text','Nombres')!!}
                             <div class="name" style="font-size: 15px;">
-                                {{Auth::user()->name}}
+                                <input type="text" name="" id="" value='{{Auth::user()->name}}' class = "form-control" disabled>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             {!! Form::Label('text','Apellidos')!!}
                             <div class="lastName" style="font-size: 15px;">
-                                {{Auth::user()->lastName}}
+                                <input type="text" name="" id="" value='{{Auth::user()->lastName}}' class = "form-control" disabled>
                             </div>
                         </div>
 
                         <div class="col-md-8">
                             {!! Form::Label('text','Correo electrónico')!!}
                             <div class="lastName" style="font-size: 15px;">
-                                {{Auth::user()->email}}
+                                <input type="text" name="" id="" value='{{Auth::user()->email}}' class = "form-control" disabled>
                             </div>
                         </div>
 

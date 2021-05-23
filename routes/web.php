@@ -15,12 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 //ESPESIFICAR LA RUTA DESDE LA RAIZ
 // LAS RUTAS SIRVE PARA QUE EL SOFTWARE
 //SEPA DONDE TIENE QUE DIRIJISE.
+
+Route::view('/about', 'about');
+Route::view('/Mision-vision', 'Mision-vision');
 Route::get('/login', 'App\Http\Controllers\ConnectController@getLogin')->name('login');
 Route::get('/register', 'App\Http\Controllers\ConnectController@getRegister')->name('register');
 Route::post('/register', 'App\Http\Controllers\ConnectController@postRegister')->name('register');

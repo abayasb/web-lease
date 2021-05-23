@@ -78,6 +78,7 @@ class ConnectController extends Controller
         $rules =[
             'name'=>'required',
             'lastName' =>'required',
+            'phone'=>'required|max:10|min:0',
             'email' => 'required|email|unique:users,email',
             'password'=>'required|min:8',
             'confirm-password'=>'required|min:8|same:password'
@@ -86,6 +87,9 @@ class ConnectController extends Controller
         $message =[
             'name.required'=>'Llene el campo nombre',
             'lastName.required'=>'Llene el campo apellido',
+            'phone.required' => 'Llene el campo telefono',
+            'phone.max'=>'Telefono solo con 10 digitos',
+            'phone.min' =>'No sea Patan',
             'email.required'=>'Llene el campo correo',
             'email.email'=>'El formato de su correo es invalido',
             'email.unique'=>'Ya existe ese correo electronico',
@@ -107,9 +111,10 @@ class ConnectController extends Controller
             $user = new User(); 
             $user->name = e($request->input('name'));
             $user->lastName = e($request->input('lastName'));
+            $user->telefono = e($request->input('phone'));
             $user->email=e($request->input('email'));
             $user->password=Hash::make($request->input('password'));
-
+            
             if($user->save()){
                 return redirect('/login')
                 ->with('message','Datos guardados correctamente')

@@ -18,6 +18,7 @@
         <div class="container-general">
 
         {!! Form::open(['url' => '/login']) !!}
+        @csrf
         <label for="email">Correo electrónico:</label>
         <div class="input-group">
                 <div class="input-group-text">
