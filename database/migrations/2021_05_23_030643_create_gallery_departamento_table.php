@@ -14,13 +14,11 @@ class CreateGalleryDepartamentoTable extends Migration
     public function up()
     {
         Schema::create('gallery_departamento', function (Blueprint $table) {
-            $table->integer('id_gallery');
-            $table->primary('id_gallery');
-
+            $table->increments('id_gallery');
+            $table->unsignedInteger('id_departamento');
             $table->string('file_path');
-            $table->string('foto');
-            
-            
+            $table->string('file_name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

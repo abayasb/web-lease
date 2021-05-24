@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGalleryTable extends Migration
+class AddRelationDepartamentGallery extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateGalleryTable extends Migration
      */
     public function up()
     {
-        Schema::create('gallery', function (Blueprint $table) {
-            $table->increments('id_foto');
-            //$table->primary('id_foto');
-            $table->string('detalle');
-            $table->timestamps();
+
+        Schema::table('gallery_departamento',function(Blueprint $table){
+            $table->foreign('id_departamento')->references('id_departamento')->on('departamento');
         });
     }
 
@@ -28,6 +26,6 @@ class CreateGalleryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gallery');
+        Schema::dropIfExists('gallery_departamento');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Admin\ModelGallery;
 use App\Models\Admin\ModelUbicacion;
 use App\Models\locatization\ModelCiudad;
 use App\Models\locatization\provincia;
@@ -21,7 +22,7 @@ class ModelDepartamento extends Model
         'descripcion',
         'precio',
         'id',
-        'id_provincia'
+        'id_provincia',
     ];
 
 
@@ -36,5 +37,9 @@ class ModelDepartamento extends Model
     
     public function ciudades(){
         return $this->belongsTo(ModelCiudad::class,'id_ciudad','id_ciudad');
+    }
+
+    public function fotos(){
+        return $this->hasMany(ModelGallery::class,'id_departamento','id_departamento');
     }
 }
