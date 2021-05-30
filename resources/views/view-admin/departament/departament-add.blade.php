@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <label for="">Universidad</label>
+                        <label for="">Referencia Universitaria</label>
                         {!!Form::select('_universidad',['placeholder'=>'Seleccione universidad'],null,['id'=>'_universidad',
                             'class'=>'form-control'])!!}
                        

@@ -1,14 +1,13 @@
-@extends('view-static.master_static')
+@extends('view-static.master')
 
 @section('title','Acerca de Nosotros')
 
 @section('content')
-<div class="about_main">
-    <div class="services_main">
-    	<div class="container">
-    		<div class="creative_taital">
-    			<h1 class="creative_text">Acerca de Nosotros</h1>
-    			<p style="color: #050000; text-align: center;">Somos <b>EasyLease</b>, un sitio web que oferta departamentos estudiantiles. 
+<div class = "container_general_about">
+  <div class = "contaniner_about_descripcion">
+      <h1>Acerca de nosotros</h1>
+    <div class = "linea"></div>
+    <p>Somos <b>EasyLease</b>, un sitio web que oferta departamentos estudiantiles. 
 				La idea de este sitio surgió por la travesía que vivió un integrante de nuestro equipo durante sus estudios en la Universidad,
 				donde se le dificulto hallar un departamento para habitar. Siendo él residente de otra ciudad, tuvo que pasar horas e incluso días buscando 
 				un lugar.
@@ -17,47 +16,34 @@
 				Es por ello que estamos muy gustosos de poner a vuestra disposición este sitio, creado y pensado en ustedes...<br>
 				<br>Att. Ángel y Daniel</br>
 				<b>Equipo EasyLease</b></p>
-    			<div class="btn_main">
-    			    <button type="button" class="btn btn-dark btn-lg">Inicio</button>
-    		    </div>
-    		</div>    
-    	</div>
+    </div>
 
-    <!--Contact_section start -->
-    <div class="contact_main">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="touch_text">Contactos</h1>
-                </div>
+<div class = "contact_main">
+  <div class = "container_title">
+    <h1>Contactanos</h1>
+    <div class = "linea"></div>
+    <div class ="example example-flex">
+      <div class = "example-content">
+        <div class ="parent">
+          <div class ="item">
+                <img src =  "{{ url('/static/img/map-icon.png')}}" >  
+                <p class = "text-map">Milagro, Ecuador</p>  
             </div>
+          
+          <div class ="item">
+            <img src =  "{{ url('/static/img/call-icon.png')}}" >
+            <p class = "text-phone">+593978671424</p>
+          </div>
+          <div class ="item">
+            <img src =  "{{ url('/static/img/email-icon.png')}}" >
+            <p class = "text-mail">abayasb@unemi.edu.ec</p>
+          </div>
         </div>
-        <div class="contact_section_2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="map_icon">
-                            <img src="static/img/map-icon.png" style="max-width: 100%;padding-left: 30px; ">
-                            <p class="email-text"><a href="#">Milagro, Ecuador<br>Ec</a></p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="map_icon">
-                            <img src="static/img/call-icon.png" style="max-width: 100%;padding-left: 30px;">
-                            <p class="email-text"><a href="#">+593 69156475</a></p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="map_icon">
-                            <img src="static/img/email-icon.png" style="max-width: 100%; padding-left: 30px;">
-                            <p class="email-text"><a href="#">abayasb@unemi.edu.ec</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!--Contact_section end -->
-    <div class="copyright">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -66,6 +52,9 @@
             </div>
         </div>
     </div>
+</div>
+
+
       <!-- Javascript files-->
       <script src="{{ url('public/static/js/jquery.min.js')}}"></script>
       <script src="{{ url('public/static/js/js/popper.min.js')}}"></script>

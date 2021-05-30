@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Admin\ModelGallery;
 use App\Models\Admin\ModelUbicacion;
 use App\Models\locatization\ModelCiudad;
+use App\Models\locatization\ModelUniversidad;
 use App\Models\locatization\provincia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -37,6 +38,10 @@ class ModelDepartamento extends Model
     
     public function ciudades(){
         return $this->belongsTo(ModelCiudad::class,'id_ciudad','id_ciudad');
+    }
+
+    public function universidades(){
+        return $this->belongsTo(ModelUniversidad::class,'id_universidad','id_universidad');
     }
 
     public function fotos(){

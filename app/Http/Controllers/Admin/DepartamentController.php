@@ -56,11 +56,6 @@ class DepartamentController extends Controller
             return response()->json($universidad); 
         }
     }
-
-    public function postUbicacion(Request $request)
-    {    
-    }
-
     
     public function postDepartament(Request $request)
     {

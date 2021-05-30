@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+  }
+  h1{
+    font-family:Poppins;
+    font-size: 30px;
+  }
+  .container_general_about{
+    width:100%;
+    position:absolute;
+    display:block;
+    text-align:center;
+    margin:auto;
+    
+  }
+  .contaniner_about_descripcion{
+    width:100%;
+    margin-right:0%;
+    /* border: 3px solid green; */
+    display: block;
+    height:auto;
+    float:left;
+  }
+  .linea{
+    border-bottom: 1px solid black;
+    max-width: 55%;
+    padding: 0;
+    margin: 20px auto 0 auto;
+  }
+  p{
+    font-family:'Raleway', sans-serif;
+     font-size:15px;
+    margin-top:30px;
+    margin-right:10%;
+    margin-left: 10%;
+    line-height:24px;
+  }
+  .contact_main{
+    margin-top:20px;
+    display: block;
+    width:100%;
+    float:left;
+    padding-top:60px;
+    padding-bottom:10px;
+  }
+  
+  .example-flex .parent {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .example-flex .item {
+    width: 33.33%;
+    height: auto;
+  }
+  .item{
+        width: 100%;
+        float: left;
+        margin-top: 10%;
+        margin-bottom: 20px;
+        text-align: center;
+  }
+  
+  .item img{
+    width:70px;
+    height: 55px;
+  }
+  
+  .text-mail{
+    width: 100%;
+    float: center;
+    color: #333;
+    text-align: left;
+    text-align: left;
+    margin-left: 0cm;
+  }
+  .parent{
+    margin-left: 20%;
+  }
+  .text-map{
+    text-align: left;
+    margin-left: 0cm;
+  }
+  .text-phone{
+    text-align: left;
+    margin-left: 0cm;
+  }

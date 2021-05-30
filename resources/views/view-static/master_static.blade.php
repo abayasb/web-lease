@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ url('/static/css/css-static/responsive.css?v='.time()) }}">
     <link rel="stylesheet" href="{{ url('/static/css/css-static/vslick.css?v='.time()) }}">
     <link rel="stylesheet" href="{{ url('/static/css/css-static/style.css?v='.time()) }}">
+    <link rel="stylesheet" href="{{ url('/static/css/css-static/view-general.css?v='.time()) }}">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     
 
@@ -56,11 +57,12 @@
 		<div class="container">
 			<div class="logo"><a href="index.html"><img width="25%" src="/static/img/logo.png"></a></div>
 		</div>
+        
     </div>
-
 
     @section('content')
 
     @show
+    
 </body>
 </html>

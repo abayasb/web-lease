@@ -1,14 +1,7 @@
-@extends('view-static.master_static')
-
-@section('title','Quines somos')
+@extends('view-static.master')
+@section('title','Mision Vision')
 
 @section('content')
-
-
-<div class="header_main">
-	
-	</div>
-    <!--services start--> 
 <div class="section_service_main">
     <div class="section_service_2">
         <h1 class="service_text">Misión y Visión</h1>
@@ -18,14 +11,14 @@
     		    		<div class="row">
     		    			<div class="col-md-6">
     		    				<div class="written_text">
-    		    					<div class="like_icon"><img src="static/img/design-icon.png"></div>
+    		    					<div class="like_icon"><img ></div>
     		    					<h1 class="written_text">MISIÓN</h1>
     		    					<p>Crecer a nivel nacional como un sitio de oferta de alojamientos estudiantiles, ofreciendo un servicio de calidad, responsable y transparente para nuestros usuarios.</p>
     		    				</div>
     		    			</div>
     		    			<div class="col-md-6">
     		    				<div class="written_text">
-    		    				  <div class="like_icon"><img src="static/img/writing-icon.png"></div>
+    		    				  <div class="like_icon"><img  ></div>
     		    					<h1 class="written_text">VISIÓN</h1>
     		    					<p>Ser reconocidos como el mejor servicio de hospitalidad para los estudiantes universitarios del país.</p>
     		    				</div>

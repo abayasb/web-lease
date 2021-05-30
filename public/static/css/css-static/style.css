@@ -355,7 +355,9 @@ a {
     margin-bottom: 47px;
     display: inline-block !important;
 }
-
+.col-sm-4{
+	display: block;
+}
 .touch_text{
 	width: 27%;
 	margin: 0 auto;

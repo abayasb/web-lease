@@ -13,11 +13,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('index');
 });
+*/
+Route::get('/','App\Http\Controllers\view\viewController@getDepartament');
 
+Route::get('/_ciudad/{id}','App\http\Controllers\view\viewController@ciudades');
+Route::get('/_universidad/{id}','App\http\Controllers\view\viewController@universidades');
+
+Route::get('/descripcion/{id}','App\Http\Controllers\view\viewController@descripcion');
 //ESPESIFICAR LA RUTA DESDE LA RAIZ
 // LAS RUTAS SIRVE PARA QUE EL SOFTWARE
 //SEPA DONDE TIENE QUE DIRIJISE.

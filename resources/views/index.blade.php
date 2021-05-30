@@ -22,31 +22,19 @@
 @stop
 
 @section('content')
-
-    
-    <table border=1>
-    <thead>
-        <tr>
-            <th style="width:300px">
-                <img src="static\img\Departamento_Uno.jpeg" alt="" width="100%">
-            </th>  
-            <th style="width:500px">
-                PROVINCIA: GUAYAS <br>
-                CANTON: MILAGRO
-                CUARTO PEQUEÑO <BR>
-                BAÑO PRIVADO <br>
-                INCLUYE LOS SERVICIO BASICOS DE: <br>
-                <ul>
-                    <li>AGUA</li>
-                    <li>INTERNET</li>
-                </ul>
-
-                Precio: 150$ en efectivo no negociable
-            </th>               
-        </tr>
-        </thead>
-
-        <tbody>    
-        </tbody>
-    </table>
-@stop
+<div class="tumbs"> 
+    @foreach($departamento as $departamentos)       
+     <div class="tumb">
+        <div class="tumb-image">
+            <img src="{{ url ('/uploads/'.$departamentos->file_path.'/t_'.$departamentos->foto_principal) }}" alt="Foto">
+        </div> 
+            <div class="contenido">    
+                <h4>Direccion:</h4>
+                <h5>{{$departamentos->direccion}}</h5>
+                <h4>{{$departamentos->descripcion}}</h4>
+                Ubicado en la provincia de: {{$departamentos->provincias->nombre_provincia}}
+            </div>
+     </div>
+     @endforeach 
+</div>
+@stop  
